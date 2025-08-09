@@ -57,7 +57,7 @@ import {
   FileDown,
   Move,
 } from "lucide-react"
-import htmlDocx from "html-docx-js"
+import htmlDocx from "html-docx-js/dist/html-docx"
 
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -601,12 +601,12 @@ export default function TiptapEditor() {
   const exportDocx = async () => {
     const html = buildExportHtml()
     // html-docx-js creates a Blob directly from HTML in the browser.
-    const blob = htmlDocx.asBlob(html) as Blob; // Ensure blob is of type Blob
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "document.docx";
-    document.body.appendChild(a);
+    const blob = htmlDocx.asBlob(html)
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement("a")
+    a.href = url
+    a.download = "document.docx"
+    document.body.appendChild(a)
     a.click()
     a.remove()
     URL.revokeObjectURL(url)
