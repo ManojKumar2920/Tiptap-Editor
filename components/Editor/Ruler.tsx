@@ -28,10 +28,11 @@ export const Ruler = () => {
 
         if (marker === "left") {
           setLeftMarker(newPos);
-          setPaddingLeft(newPos);
+          if (setPaddingLeft) setPaddingLeft(newPos);
           
-        } else {setRightMarker(newPos)
-          setPaddingRight(newPos)
+        } else {
+          setRightMarker(newPos);
+          if (setPaddingRight) setPaddingRight(newPos);
         };
       };
 
