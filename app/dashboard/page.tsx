@@ -1,6 +1,6 @@
 
-import { AppSidebar } from "@/components/app-sidebar"
-import TextEditor from "@/components/TextEditor"
+import { AppSidebar } from "@/components/Sidebar/app-sidebar"
+import TextEditor from "@/components/Dashboard/TextEditor"
 import {
   SidebarInset,
   SidebarProvider,

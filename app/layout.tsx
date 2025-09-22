@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import localFont from 'next/font/local'
- 
-const Avenir = localFont({
-  src: '../font/AvenirLTStd-Medium.otf',
-  variable: '--font--avenir'
-})
 
- 
 
 export const metadata: Metadata = {
   title: "Vettam AI - Editor",
@@ -21,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${Avenir.className}  antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>
